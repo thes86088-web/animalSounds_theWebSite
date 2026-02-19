@@ -45,20 +45,21 @@
     <body  class="dark">
 
         <div id="modes">
-            <button id="dark" class="modes">
+            <button id="dark_mode" class="modes">
                 <p>dark</p>
             </button>
-            <button id="bright" class="modes">
+
+            <button id="bright_mode" class="modes">
                 <p>bright</p>
             </button>
         </div>
 
-         <div id="lion">
-             <img src="pexels-frans-van-heerden-201846-3651335.jpg">
-         </div>
+        <div id="lion">
+          <img src="pexels-frans-van-heerden-201846-3651335.jpg">
+        </div>
 
-         <div id="tiger">
-             <img src="pexels-pixabay-47312.jpg">
+        <div id="tiger">
+            <img src="pexels-pixabay-47312.jpg">
         </div>
 
         <div id="elephant">
@@ -91,6 +92,24 @@
 
     </body>
 
+    <script>
+
+        function switchToBright()
+        {
+            const piece = document.getElementsByClassName("dark") ;
+            piece.class = "bright";
+        }
+
+        function switchToDark()
+        {
+            document.getElementsByClassName("bright").class = "dark";
+        }
+
+
+        document.getElementById("dark_mode").addEventListener("click", switchToDark  ) ;
+        document.getElementById("bright_mode").addEventListener("click", switchToBright  ) ;
+
+    </script>
 
 </html>
 
