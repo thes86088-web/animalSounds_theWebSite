@@ -54,39 +54,39 @@
             </button>
         </div>
 
-        <div id="lion">
+        <div id="lion" onclick="playSound(this)">
           <img src="pexels-frans-van-heerden-201846-3651335.jpg">
         </div>
 
-        <div id="tiger">
+        <div id="tiger" onclick="playSound(this)">
             <img src="pexels-pixabay-47312.jpg">
         </div>
 
-        <div id="elephant">
+        <div id="elephant" onclick="playSound(this)">
             <img src="pexels-inspiredimages-133394.jpg">
         </div>
 
-        <div id="alligator">
+        <div id="alligator" onclick="playSound(this)">
             <img src="pexels-monkeytactics-769433.jpg">
         </div>
 
-        <div id="horse">
+        <div id="horse" onclick="playSound(this)">
             <img src="pexels-dibert-635499.jpg">
         </div>
 
-        <div id="cat">
+        <div id="cat" onclick="playSound(this)" >
             <img src="pexels-francesco-ungaro-96938.jpg">
         </div>
 
-        <div id="dog">
+        <div id="dog" onclick="playSound(this)">
             <img src="pexels-garfield-besa-95119-686094.jpg">
         </div>
 
-        <div id="dolphin">
+        <div id="dolphin" onclick="playSound(this)">
             <img src="pexels-tonynojmansk-186688133-18163416.jpg">
         </div>
 
-        <div id="rat">
+        <div id="rat" onclick="playSound(this)">
             <img src="pexels-denitsa-kireva-2915302-14399486.jpg">
         </div>
 
@@ -109,12 +109,19 @@
                     case("cat") : 
                         return "dragon-studio-cute-cat-meow-472372.mp3";
                     case ("dog") : 
-                        return "drinagon-studio-free-dog-bark-419014.mp3";
+                        return "dragon-studio-free-dog-bark-419014.mp3";
                     case("dolphin") : 
                         return "freesound_community-dolphin-noise-6968.mp3";
                     case("rat") : 
                         return "sound_garage-rat-squeaks-4-fx-396298.mp3";
                 }
+            }
+
+            function playSound(element)
+            { 
+                let soundName = giveSound(element.id);
+                var sound = new Audio(soundName) ;
+                sound.play();
             }
             /*function switchToBright()
             {
