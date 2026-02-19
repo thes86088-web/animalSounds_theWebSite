@@ -129,6 +129,9 @@
                     let g = Math.floor( 256*Math.random() );
                     let b = Math.floor( 256*Math.random() );
 
+                    let sound = new Audio("Party Horn Sound Effect.mp3");
+                    sound.play();
+
                     color = `rgb( ${r}, ${g}, ${b} )`;
                 }
                 document.getElementById("body").style.backgroundColor = color;
