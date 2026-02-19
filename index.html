@@ -45,6 +45,10 @@
             <button id="white" class="modes" onclick="switchToColorModeOf(this)">
                 <p>bright</p>
             </button>
+
+            <button id="random" class="modes" onclick="switchToColorModeOf(this)">
+                <p>random</p>
+            </button>
         </div>
 
         <div id="lion" onclick="playSound(this)">
@@ -118,7 +122,16 @@
             }
             function switchToColorModeOf(element)
             {
-                document.getElementById("body").style.backgroundColor = element.id;
+                let color = element.id ;
+                if(color==="random")
+                {
+                    let r = Math.floor( 256*Math.random() );
+                    let g = Math.floor( 256*Math.random() );
+                    let b = Math.floor( 256*Math.random() );
+
+                    color = `rgb( ${r}, ${g}, ${b} )`;
+                }
+                document.getElementById("body").style.backgroundColor = color;
             }
     
             /*
