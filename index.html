@@ -38,11 +38,11 @@
     <body  id="body">
 
         <div id="modes">
-            <button id="black" class="modes" onclick="switchToDark">
+            <button id="black" class="modes" onclick="switchToDark(this)">
                 <p>dark</p>
             </button>
 
-            <button id="white" class="modes" onclick="switchToBright">
+            <button id="white" class="modes" onclick="switchToBright(this)">
                 <p>bright</p>
             </button>
         </div>
@@ -116,14 +116,14 @@
                 var sound = new Audio(soundName) ;
                 sound.play();
             }
-            function switchToBright()
+            function switchToBright(element)
             {
-                document.getElementById("body").style.backgroundColor = "white";
+                document.getElementById("body").style.backgroundColor = element.id;
             }
     
-            function switchToDark()
+            function switchToDark(element)
             {
-                document.getElementById("body").style.backgroundColor = "black";
+                document.getElementById("body").style.backgroundColor = element.id ;
             }
 
             /*
